@@ -20,3 +20,10 @@ def test_div_100():
     assert leapyear.is_leapyear(1800) == False
     assert leapyear.is_leapyear(1900) == False
     assert leapyear.is_leapyear(2100) == False
+
+# Test to make sure that the program correctly detects that years divisible by 400 are
+# leap years.
+def test_div_400():
+    assert leapyear.is_leapyear(1600) == True
+    assert leapyear.is_leapyear(2000) == True
+    assert leapyear.is_leapyear(2400) == True
