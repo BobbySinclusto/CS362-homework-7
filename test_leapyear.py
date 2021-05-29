@@ -13,3 +13,10 @@ def test_not_div_4():
     assert leapyear.is_leapyear(3) == False
     assert leapyear.is_leapyear(1999) == False
     assert leapyear.is_leapyear(2001) == False
+
+# Test to make sure that the program correctly detects that years divisible by 100 are
+# not leap years.
+def test_div_100():
+    assert leapyear.is_leapyear(1800) == False
+    assert leapyear.is_leapyear(1900) == False
+    assert leapyear.is_leapyear(2100) == False
